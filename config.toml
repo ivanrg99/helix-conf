@@ -1,0 +1,29 @@
+theme = "modus_vivendi_tritanopia"
+# theme = "ao"
+[editor]
+mouse = true
+# lsp.enable = false
+auto-completion = false
+auto-format = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.insert]
+j = { j = "normal_mode" }
+"C-c" = "normal_mode"
+
+[keys.normal]
+"g" = { "S" = ["vsplit", "jump_view_up", "goto_definition"] }
+D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
+"space" = { "f" = ":format" }
+"C-p" = "file_picker"
+"C-h" ="jump_view_left"
+"C-l" ="jump_view_right"
+"C-k" ="jump_view_up"
+"C-j" ="jump_view_down"
+
+[editor.lsp]
+display-inlay-hints = true
